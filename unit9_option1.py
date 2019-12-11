@@ -17,8 +17,10 @@ def deal_cards(my_deck):
 def compare_cards(user_card, dealer_card):
     if user_card > dealer_card:
         print("The user wins!")
+        return True
     elif dealer_card > user_card:
         print("The dealer wins!")
+        return False
 
 
 def main():
@@ -26,19 +28,18 @@ def main():
     my_deck.shuffle()
     user_deal = deal_cards(my_deck)
     dealer_deal = deal_cards(my_deck)
-    for x in range:
-
-    print("The user has the cards:")
-    for y in user_deal:
-        print(y)
-    print("")
-
-    print("The dealer has the cards:")
-    for z in dealer_deal:
-        print(z)
+    user_score = 0
+    dealer_score = 0
     for x in range(5):
+        print("The user has", user_deal[x])
+        print("The dealer has", dealer_deal[x])
+        if compare_cards(user_deal[x], dealer_deal[x]):
+            user_score += 1
+        else:
+            dealer_score += 1
         print("")
-        compare_cards(user_deal, dealer_deal)
+        print("The user's final score is", user_score, "and the dealer's final score is", dealer_score)
+
 
 
 main()
