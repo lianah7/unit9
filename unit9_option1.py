@@ -41,8 +41,8 @@ def main():
     user_score = 0
     dealer_score = 0
     for x in range(5):
-        print("The user has", user_deal[x])
-        print("The dealer has", dealer_deal[x])
+        print("The user has the card,", user_deal[x])
+        print("The dealer has the card,", dealer_deal[x])
         if compare_cards(user_deal[x], dealer_deal[x]):
             user_score += 1
         else:
